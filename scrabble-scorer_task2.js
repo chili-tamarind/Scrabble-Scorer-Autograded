@@ -22,9 +22,9 @@ function oldScrabbleScorer(word) {
    
 	for (let i = 0; i < word.length; i++) {
 
-   for (const pointValue in newPointStructure) {
+   for (const pointValue in oldPointStructure) {
 
-      if (newPointStructure[pointValue].includes(word[i])) {
+      if (oldPointStructure[pointValue].includes(word[i])) {
       letterPoints += `Points for '${word[i]}': ${pointValue}\n`
       }
 
@@ -47,19 +47,7 @@ function initialPrompt() {
 };
 
 
-let newPointStructure = transform(oldPointStructure); /*{
-   'A': 1, 'B': 3, 'C': 3, 'D': 2, 'E': 1,
-   'F': 4, 'G': 2, 'H': 4, 'I': 1, 'J': 8,
-   'K': 5, 'L': 1, 'M': 3, 'N': 1, 'O': 1,
-   'P': 3, 'Q': 10, 'R': 1, 'S': 1, 'T': 1,
-   'U': 1, 'V': 4, 'W': 4, 'X': 8, 'Y': 4,
-   'Z': 10
-};*/
-
-/*console.log("Scrabble scoring values for");
-console.log("letter a: ", newPointStructure.a);
-console.log("letter j: ", newPointStructure.j);
-console.log("letter z: ", newPointStructure["z"]);*/
+let newPointStructure;
 
 // Define a function that takes a word as a parameter and returns a numerical score. Each letter within the word is worth 1 point.
 let simpleScorer = function(word) {   
@@ -133,30 +121,7 @@ function scorerPrompt() {
    return my_scorer_num = scoringAlgorithms[my_scorer_num];
 }
 
-// Write the rest of the transform() function. It will need to take an object as a parameter - specifically the oldPointStructure object. Calling transform(oldPointStructure) will return an object with lowercase letters as keys. The value for each key will be the points assigned to that letter.
-
-function transform(oldPointStructure) {
-
-   let myPointStructure = new Object();
-   
-   for (key in oldPointStructure) {
-      
-      for (letter in oldPointStructure[key]) {
-
-      myPointStructure[(oldPointStructure[key][letter]).toLowerCase()] = key;
-
-       //console.log('key', key)
-       //console.log('letter',letter)
-       //console.log(oldPointStructure[key][letter])
-       //console.log()
-      }
-   }
-   
-   //let sort_myPointStructure = Object.keys(myPointStructure).sort();
-   //return sort_myPointStructure       
-   
-   return myPointStructure  
-};
+function transform() {};
 
 function runProgram() {
    
