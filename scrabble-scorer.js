@@ -141,7 +141,7 @@ const scoringAlgorithms = [
 // scorerPrompt() should return the object the user has selected.
 function scorerPrompt() {
    
-   console.log("\nSelect your scorer")
+   console.log("Select your scorer")
 
    let my_scorers = [0,1,2];
    let my_scorer_num = 3;
