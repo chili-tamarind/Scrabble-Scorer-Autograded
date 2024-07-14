@@ -2,7 +2,6 @@ const scorer = require('./scrabble-scorer');
 
 scorer.runProgram();
 
-
 /* 
 First run some test words with your program. Here are some words you can use to test your code:
 
