@@ -2,7 +2,7 @@
 
 // https://github.com/LaunchCodeEducation/Scrabble-Scorer-Autograded
 
-const input = require("readline-sync");
+const input = require("readline-sync"); 
 
 const oldPointStructure = {
    1: ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T'],
@@ -11,7 +11,7 @@ const oldPointStructure = {
    4: ['F', 'H', 'V', 'W', 'Y'],
    5: ['K'],
    8: ['J', 'X'],
-   10: ['Q', 'Z']
+   10: ['Q', 'Z'] 
 };
 
 /*Use the oldScrabbleScorer() function provided to score the word provided by the user. Print the result to the console.*/
@@ -170,7 +170,7 @@ function transform(oldPointStructure) {
       
       for (letter in oldPointStructure[key]) {
 
-      myPointStructure[(oldPointStructure[key][letter]).toLowerCase()] = Number(key);
+      myPointStructure[(oldPointStructure[key][letter]).toLowerCase()] = Number(key); // Casting key to number
 
        //console.log('key', key)
        //console.log('letter',letter)
